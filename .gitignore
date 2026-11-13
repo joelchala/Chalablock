@@ -5,3 +5,6 @@ node_modules/
 /dist/build/
 /tmp/
 .DS_Store
+
+# Store packages are published as GitHub release assets
+/store/paquetes/
