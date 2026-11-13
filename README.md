@@ -43,7 +43,7 @@ La prueba cubre 11 servicios y 22 comprobaciones. En modo óptimo, el único pun
 
 ## Instalación
 
-Chalablock todavía no está publicado en las tiendas de extensiones. Para instalarlo desde el código:
+Chalablock todavía no está publicado en las tiendas de extensiones. Puedes descargar el paquete ya compilado desde las [versiones publicadas](https://github.com/joelchala/Chalablock/releases), descomprimirlo y cargarlo como se indica abajo, o compilarlo tú mismo:
 
 1. Compila la extensión (ver más abajo) o descarga una compilación.
 2. Abre `chrome://extensions` (Chrome) o `edge://extensions` (Edge).
@@ -62,7 +62,9 @@ git clone --recurse-submodules https://github.com/joelchala/Chalablock.git
 cd Chalablock && bash tools/make-mv3.sh chromium
 ```
 
-El resultado queda en `dist/build/uBOLite.chromium`. Durante la compilación se descargan las listas de filtros desde sus servidores de origen. El código de la extensión está en [`platform/mv3/`](platform/mv3/).
+Cada versión se compila automáticamente en GitHub Actions al publicar una etiqueta  ([build.yml](.github/workflows/build.yml)).
+
+En una compilación local, el resultado queda en `dist/build/uBOLite.chromium`. Durante la compilación se descargan las listas de filtros desde sus servidores de origen. El código de la extensión está en [`platform/mv3/`](platform/mv3/).
 
 ## Hoja de ruta
 
@@ -73,7 +75,6 @@ Mejoras previstas para las próximas versiones. Nada de esto está implementado 
 | Lista propia para Latinoamérica | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
 | Traducción completa de los textos propios | Los textos añadidos por Chalablock solo están en español e inglés |
 | Canal propio de reportes | Recibir aquí los reportes de sitios en español en vez de enviarlos al proyecto original |
-| Compilación automática | Generar el paquete listo para instalar en cada versión, sin compilar a mano |
 | Publicación en Chrome Web Store y Edge Add-ons | Instalación con un clic y actualizaciones automáticas |
 
 Las sugerencias son bienvenidas en los [reportes del repositorio](https://github.com/joelchala/Chalablock/issues).

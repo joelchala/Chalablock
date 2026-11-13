@@ -214,7 +214,7 @@ if [ "$FULL" = "yes" ]; then
         EXTENSION="xpi"
     fi
     echo "*** uBOLite.mv3: Creating publishable package..."
-    UBOL_PACKAGE_NAME="uBOLite_$TAGNAME.$PLATFORM.$EXTENSION"
+    UBOL_PACKAGE_NAME="Chalablock_$TAGNAME.$PLATFORM.$EXTENSION"
     UBOL_PACKAGE_DIR=$(mktemp -d)
     mkdir -p "$UBOL_PACKAGE_DIR"
     cp -R "$UBOL_DIR"/* "$UBOL_PACKAGE_DIR"/
