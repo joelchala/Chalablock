@@ -4,6 +4,7 @@
 
 - **Autor:** Joel Chala
 - **Repositorio:** https://github.com/joelchala/Chalablock
+- **Privacidad:** [Política de privacidad](PRIVACY.md)
 - **Licencia:** [GNU GPLv3](LICENSE.txt)
 - **Basado en:** [uBlock Origin Lite](https://github.com/gorhill/uBlock) de Raymond Hill (gorhill). Chalablock es una versión modificada; no está afiliado al autor original ni cuenta con su respaldo.
 
