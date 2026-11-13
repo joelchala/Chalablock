@@ -27,6 +27,8 @@ Chalablock bloquea anuncios, rastreadores y sitios maliciosos desde el momento e
 - **Cuatro modos de filtrado por sitio**, desde «sin filtrado» hasta «completo», con un control deslizante en el popup.
 - **Herramientas por página:** eliminar un elemento molesto con un clic y crear filtros personalizados.
 - **Más de 50 listas opcionales**, regionales y temáticas (avisos de cookies, redes sociales, molestias).
+- **Pantalla de bienvenida** en español que explica los modos de filtrado al instalar.
+- **Sin huecos en blanco:** los espacios de anuncios de AdSense bloqueados se colapsan.
 - **Interfaz propia**, con tema claro y oscuro.
 - **Sin telemetría, sin cuentas, sin servidores.**
 
@@ -69,7 +71,6 @@ Mejoras previstas para las próximas versiones. Nada de esto está implementado 
 | Mejora | Qué aporta |
 |---|---|
 | Lista propia para Latinoamérica | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
-| Pantalla de bienvenida | Explicar en español los modos de filtrado al instalar |
 | Traducción completa de los textos propios | Los textos añadidos por Chalablock solo están en español e inglés |
 | Canal propio de reportes | Recibir aquí los reportes de sitios en español en vez de enviarlos al proyecto original |
 | Compilación automática | Generar el paquete listo para instalar en cada versión, sin compilar a mano |

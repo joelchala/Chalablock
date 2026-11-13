@@ -474,5 +474,41 @@
   "popupBlockedCount": {
     "message": "blocked on this page",
     "description": "Follows a number in the popup panel: requests blocked in the current tab"
+  },
+  "welcomeTitle": {
+    "message": "Welcome to Chalablock",
+    "description": "Title of the page shown once after installation"
+  },
+  "welcomeIntro": {
+    "message": "Chalablock is already blocking ads and trackers. There is nothing to set up.",
+    "description": "Introduction on the welcome page"
+  },
+  "welcomeStep1Title": {
+    "message": "Pin the icon",
+    "description": "Welcome page, step 1 title"
+  },
+  "welcomeStep1Text": {
+    "message": "Open the extensions menu of your browser and pin Chalablock. The icon shows how many requests were blocked on each page.",
+    "description": "Welcome page, step 1 text"
+  },
+  "welcomeStep2Title": {
+    "message": "Choose the filtering mode for each site",
+    "description": "Welcome page, step 2 title"
+  },
+  "welcomeStep2Text": {
+    "message": "Click the icon and move the slider: no filtering, basic, optimal (the default) or complete. If a site stops working properly, lower the mode on that site only.",
+    "description": "Welcome page, step 2 text"
+  },
+  "welcomeStep3Title": {
+    "message": "Remove what bothers you",
+    "description": "Welcome page, step 3 title"
+  },
+  "welcomeStep3Text": {
+    "message": "From the same panel you can remove an element from the page with one click or create your own filters.",
+    "description": "Welcome page, step 3 text"
+  },
+  "welcomeOpenSettings": {
+    "message": "Open settings",
+    "description": "Button on the welcome page that opens the dashboard"
   }
 }

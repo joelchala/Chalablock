@@ -39,6 +39,12 @@
             placeholder.dataset.adsbygoogleStatus = 'done';
             placeholder.dataset.adStatus = 'filled';
             fr.dataset.loadComplete = 'true';
+            // Chalablock: collapse the now-empty ad slot instead of leaving a
+            // blank box. Kept at 1px (not 0, not display:none) because common
+            // anti-adblock checks look for a zero-height or hidden slot.
+            placeholder.style.setProperty('height', '1px', 'important');
+            placeholder.style.setProperty('min-height', '0', 'important');
+            placeholder.style.setProperty('overflow', 'hidden', 'important');
         }, { once: true });
         fr.contentWindow.location = 'data:text/html;charset=utf-8;base64,PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgICA8aGVhZD48dGl0bGU+PC90aXRsZT48L2hlYWQ+DQogICAgPGJvZHk+PC9ib2R5Pg0KPC9odG1sPg==';
     };

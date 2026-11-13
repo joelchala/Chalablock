@@ -474,5 +474,41 @@
   "popupBlockedCount": {
     "message": "bloqueados en esta página",
     "description": "Follows a number in the popup panel: requests blocked in the current tab"
+  },
+  "welcomeTitle": {
+    "message": "¡Bienvenido a Chalablock!",
+    "description": "Title of the page shown once after installation"
+  },
+  "welcomeIntro": {
+    "message": "Chalablock ya está bloqueando anuncios y rastreadores. No tienes que configurar nada.",
+    "description": "Introduction on the welcome page"
+  },
+  "welcomeStep1Title": {
+    "message": "Fija el icono",
+    "description": "Welcome page, step 1 title"
+  },
+  "welcomeStep1Text": {
+    "message": "Abre el menú de extensiones de tu navegador y fija Chalablock. El icono muestra cuántas peticiones se bloquearon en cada página.",
+    "description": "Welcome page, step 1 text"
+  },
+  "welcomeStep2Title": {
+    "message": "Elige el modo de filtrado en cada sitio",
+    "description": "Welcome page, step 2 title"
+  },
+  "welcomeStep2Text": {
+    "message": "Haz clic en el icono y mueve el control: sin filtrado, básico, óptimo (el predeterminado) o completo. Si un sitio deja de funcionar bien, baja el modo solo en ese sitio.",
+    "description": "Welcome page, step 2 text"
+  },
+  "welcomeStep3Title": {
+    "message": "Elimina lo que te moleste",
+    "description": "Welcome page, step 3 title"
+  },
+  "welcomeStep3Text": {
+    "message": "Desde el mismo panel puedes eliminar un elemento de la página con un clic o crear tus propios filtros.",
+    "description": "Welcome page, step 3 text"
+  },
+  "welcomeOpenSettings": {
+    "message": "Abrir configuración",
+    "description": "Button on the welcome page that opens the dashboard"
   }
 }

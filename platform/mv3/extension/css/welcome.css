@@ -1,0 +1,86 @@
+/* Chalablock: first-run welcome page */
+body {
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em;
+}
+main {
+    max-width: 640px;
+    text-align: center;
+}
+.logo {
+    height: 96px;
+    width: 96px;
+}
+h1 {
+    font-size: 1.8em;
+    margin: 0.5em 0 0.25em;
+}
+.intro {
+    color: var(--ink-2);
+    font-size: 1.1em;
+}
+ol {
+    counter-reset: step;
+    list-style: none;
+    margin: 2em 0;
+    padding: 0;
+    text-align: start;
+}
+ol > li {
+    background-color: var(--surface-1);
+    border-radius: 8px;
+    counter-increment: step;
+    margin-bottom: 0.75em;
+    padding: 1em 1em 1em 3.5em;
+    position: relative;
+}
+ol > li::before {
+    background-color: var(--accent-surface-1);
+    border-radius: 50%;
+    color: var(--accent-ink-1);
+    content: counter(step);
+    font-weight: 700;
+    height: 1.8em;
+    left: 1em;
+    line-height: 1.8em;
+    position: absolute;
+    text-align: center;
+    width: 1.8em;
+}
+[dir="rtl"] ol > li {
+    padding: 1em 3.5em 1em 1em;
+}
+[dir="rtl"] ol > li::before {
+    left: auto;
+    right: 1em;
+}
+ol > li > b {
+    display: block;
+    margin-bottom: 0.25em;
+}
+ol > li > span {
+    color: var(--ink-2);
+}
+.actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+}
+a {
+    color: var(--accent-surface-1);
+}
+a.primary {
+    background-color: var(--accent-surface-1);
+    border-radius: 999px;
+    color: var(--accent-ink-1);
+    font-weight: 600;
+    padding: 0.6em 1.4em;
+    text-decoration: none;
+}
+.donate {
+    font-size: 0.9em;
+    margin-top: 2em;
+}

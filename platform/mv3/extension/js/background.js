@@ -805,6 +805,8 @@ async function startSession() {
     // Switch to basic filtering if uBOL doesn't have broad permissions at
     // install time.
     if ( process.firstRun ) {
+        // Chalablock: show the welcome page once, right after installation
+        browser.tabs.create({ url: runtime.getURL('/welcome.html') });
         const enableOptimal = await hasBroadHostPermissions();
         if ( enableOptimal === false ) {
             const afterLevel = await setDefaultFilteringMode(MODE_BASIC);
