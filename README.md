@@ -1,211 +1,90 @@
-# Chalablock
-
-**Chalablock** es un bloqueador de anuncios de código abierto para navegadores Chromium (Manifest V3), enfocado en privacidad y bloqueo rápido.
-
-- **Autor:** Joel Chala
-- **Repositorio:** https://github.com/joelchala/Chalablock
-- **Privacidad:** [Política de privacidad](PRIVACY.md)
-- **Licencia:** [GNU GPLv3](LICENSE.txt)
-- **Basado en:** [uBlock Origin Lite](https://github.com/gorhill/uBlock) de Raymond Hill (gorhill). Chalablock es una versión modificada; no está afiliado al autor original ni cuenta con su respaldo.
-
-## Cambios respecto al original (noviembre de 2026)
-
-- Nombre, descripción e iconos propios (`platform/mv3/extension/img/`).
-- Tema visual propio en el popup (`platform/mv3/extension/css/popup.css`).
-- Listas en español (EasyList Spanish y AdGuard Spanish/Portuguese) activas por defecto (`platform/mv3/rulesets.json`).
-
-El código de Chalablock está en `platform/mv3/`. Para compilar: `make mv3-chromium` (ver `platform/mv3/README.md`).
-
-A continuación se conserva el README original de uBlock Origin.
-
-***
-
-[![Badge Commits]][Commit Rate]
-[![Badge Issues]][Issues]
-[![Badge Localization]][Crowdin]
-[![Badge License]][License]
-[![Badge NPM]][NPM]
-[![Badge Mozilla]][Mozilla]
-![Badge Chrome]
-[![Badge Edge]][Edge]
-
-***
-
 <h1 align="center">
-<sub>
-<img src="https://github.com/gorhill/uBlock/blob/master/src/img/ublock.svg" height="38" width="38">
-</sub>
-uBlock Origin (uBO)
+<img src="platform/mv3/extension/img/chalablock.svg" height="48" width="48" alt="">
+<br>
+Chalablock
 </h1>
 
-| Browser   | Install from ... | Status |
-| :-------: | ---------------- | ------ |
-| <img src="https://github.com/user-attachments/assets/b0136512-56a5-4856-8c50-4971c957a24f" alt="Get uBlock Origin for Firefox"> | <a href="https://addons.mozilla.org/addon/ublock-origin/">Firefox Add-ons</a> | [uBO works best on Firefox](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox) |
-| <img src="https://github.com/user-attachments/assets/3a7569f8-688b-4eb1-a643-8d0fe173aefe" alt="Get uBlock Origin for Microsoft Edge"> | <a href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak">Edge Add-ons</a> | <a href="https://blogs.windows.com/msedgedev/2026/08/07/moving-the-microsoft-edge-extensions-ecosystem-forward-with-manifest-version-3/">"Moving the Microsoft Edge extensions ecosystem forward with Manifest Version 3"</a>: "Beginning in August 2026, Microsoft Edge will start the consumer transition away from Manifest Version 2 (MV2) extensions and toward MV3. Our goal is to complete the consumer transition by the end of 2026, with enterprise deprecation following in early 2027." |
-| <img src="https://github.com/user-attachments/assets/938f080c-fe64-4e48-8b89-4bfceabb56e6" alt="Get uBlock Origin for Opera"> | <a href="https://addons.opera.com/extensions/details/ublock/">Opera Add-ons</a> |
-| <img src="https://github.com/user-attachments/assets/5463ef88-873b-4516-8514-5277664cfde7" alt="Get uBlock Origin for Chromium"> | Removed | <a href="https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline#aug_31st_2026_all_remaining_manifest_v2_extensions_removed_from_the_chrome_web_store">"Manifest V2 support timeline"</a>: "Aug 31st 2026: All remaining Manifest V2 extensions removed from the Chrome Web Store"<br><a href="https://github.com/uBlockOrigin/uBlock-issues/wiki/About-Google-Chrome's-%22This-extension-may-soon-no-longer-be-supported%22">About Google Chrome's "This extension may soon no longer be supported"</a> |
-| <img src="https://github.com/user-attachments/assets/2e9037c4-836d-44c1-a716-ba96e89daaff" alt="Get uBlock Origin for Thunderbird"> | <a href="https://addons.thunderbird.net/thunderbird/addon/ublock-origin/">Thunderbird Add-ons</a> | [No longer updated and stuck at 1.49.2.](https://github.com/uBlockOrigin/uBlock-issues/issues/2928) Later versions require "GitHub - Releases". |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" height="50" alt="Get uBlock Origin through GitHub"> | <a href="https://github.com/gorhill/uBlock/releases">GitHub - Releases</a> | Stable and development versions on Firefox, Chromium MV2, and Thunderbird. Must be placed manually into web browsers; the Chromium and Thunderbird versions usually won't auto-update.
-
-<h3> Related: 
-<sub>
-<img src="https://github.com/gorhill/uBlock/blob/master/platform/mv3/extension/img/ublock.svg" height="24" width="24">
-</sub>
-<a href="https://github.com/uBlockOrigin/uBOL-home">uBlock Origin Lite</a>
-</h3>
-
+<p align="center">
+Bloqueador de anuncios de código abierto para Chrome, Edge y otros navegadores Chromium.<br>
+Rápido, privado y pensado para quienes navegan en español.
+</p>
 
 ***
 
-uBlock Origin (uBO) is a CPU and memory-efficient [wide-spectrum content blocker][Blocking] for Chromium and Firefox. It blocks ads, trackers, coin miners, popups, annoying anti-blockers, malware sites, etc., by default using [EasyList][EasyList], [EasyPrivacy][EasyPrivacy], [Peter Lowe's Blocklist][Peter Lowe's Blocklist], [Online Malicious URL Blocklist][Malicious Blocklist], and uBO [filter lists][uBO Filters]. There are many other lists available to block even more. Hosts files are also supported. uBO uses the EasyList filter syntax and [extends][Extended Syntax] the syntax to work with custom rules and filters.
+## Qué es
 
-You may easily unselect any preselected filter lists if you think uBO blocks too much. For reference, Adblock Plus installs with only EasyList, ABP filters, and Acceptable Ads enabled by default.
+Chalablock bloquea anuncios, rastreadores y sitios maliciosos desde el momento en que se instala. Funciona con Manifest V3: las reglas de bloqueo vienen incluidas en la extensión y las aplica el propio navegador, así que no hay procesos en segundo plano consumiendo memoria ni servidores a los que se envíen tus datos.
 
-It is important to note that using a blocker is **NOT** [theft]. Do not fall for this creepy idea. The _ultimate_ logical consequence of `blocking = theft` is the criminalization of the inalienable right to privacy.
+- **Autor y mantenimiento:** Joel Chala
+- **Licencia:** [GNU GPLv3](LICENSE.txt)
+- **Privacidad:** [no recopila ningún dato](PRIVACY.md)
 
-Ads, "unintrusive" or not, are just the visible portion of the privacy-invading means entering your browser when you visit most sites. **uBO's primary goal is to help users neutralize these privacy-invading methods** in a way that welcomes those users who do not wish to use more technical means.
+## Características
 
-***
+- **Bloqueo inmediato**, sin configuración: anuncios, rastreadores, criptomineros y dominios de malware.
+- **Listas en español activas por defecto:** EasyList Spanish y AdGuard Spanish/Portuguese, además de las listas generales.
+- **Cuatro modos de filtrado por sitio**, desde «sin filtrado» hasta «completo», con un control deslizante en el popup.
+- **Herramientas por página:** eliminar un elemento molesto con un clic y crear filtros personalizados.
+- **Más de 50 listas opcionales**, regionales y temáticas (avisos de cookies, redes sociales, molestias).
+- **Interfaz propia**, con tema claro y oscuro.
+- **Sin telemetría, sin cuentas, sin servidores.**
 
-* [Documentation](#documentation)
-* [Installation](#installation)
-  * [Firefox](#firefox)
-  * [Chromium](#chromium)
-  * [Thunderbird](#thunderbird)
-  * [All Programs](#all-programs)
-  * [Enterprise Deployment](#enterprise-deployment)
-* [Release History](#release-history)
-* [Translations](#translations)
-* [About](#about)
+## Resultados de prueba
 
-## Documentation
+| Prueba | Resultado | Navegador | Fecha |
+|---|---|---|---|
+| [adblock-tester.com](https://adblock-tester.com/) | 91 de 100 (11 servicios, 22 comprobaciones) | Microsoft Edge | 12 nov 2026 |
 
-<table>
-    <thead>
-        <tr>
-            <th>Basic Mode</th>
-            <th>Advanced Mode</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>The <a href="https://github.com/gorhill/uBlock/wiki/Quick-guide:-popup-user-interface">simple popup user interface</a> for an install-it-and-forget-it type of installation that is configured optimally by default.</td>
-            <td>The <a href="https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-quick-guide">advanced popup user interface</a> includes a point-and-click firewall that is configurable on a per-site basis.</td>
-        </tr>
-        <tr>
-            <td align="center" valign="top"><a href="https://github.com/gorhill/uBlock/wiki/Quick-guide:-popup-user-interface"><img src="https://user-images.githubusercontent.com/585534/232531044-c4ac4dd5-0b60-4c1e-aabb-914be04b846c.png"/></a></td>
-            <td align="center" valign="top"><a href="https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-quick-guide"><img src="https://user-images.githubusercontent.com/585534/232531439-a8f81cc3-6622-45c4-8b32-7348cecf6e98.png"/></a></td>
-        </tr>
-    </tbody>
-</table>
+El único punto no superado con certeza es la visibilidad del bloque de Google AdSense, que el propio sitio marca como no determinable de forma automática.
 
-Visit the [Wiki][Wiki] for documentation.
+## Instalación
 
-For support, questions, or help, visit [/r/uBlockOrigin][Reddit].
+Chalablock todavía no está publicado en las tiendas de extensiones. Para instalarlo desde el código:
 
-## Installation
+1. Compila la extensión (ver más abajo) o descarga una compilación.
+2. Abre `chrome://extensions` (Chrome) o `edge://extensions` (Edge).
+3. Activa el **modo de desarrollador**.
+4. Pulsa **Cargar descomprimida** y elige la carpeta `dist/build/uBOLite.chromium`.
 
-[Required Permissions][Permissions]
+## Compilar
 
-#### Firefox
+Requisitos: Git, Bash, Node.js 22 o superior y `jq`. En Windows sirve Git Bash.
 
-[Firefox Add-ons][Mozilla]
+```bash
+git clone --recurse-submodules https://github.com/joelchala/Chalablock.git
+```
 
-[Development Builds][Beta]
+```bash
+cd Chalablock && bash tools/make-mv3.sh chromium
+```
 
-uBO [works best][Works Best] on Firefox and is available for desktop and Android versions.
+El resultado queda en `dist/build/uBOLite.chromium`. Durante la compilación se descargan las listas de filtros desde sus servidores de origen. El código de la extensión está en [`platform/mv3/`](platform/mv3/).
 
-#### Chromium
+## Hoja de ruta
 
-Chrome Web Store: Removed on 2026-08-31
+Mejoras previstas para las próximas versiones. Nada de esto está implementado todavía.
 
-[Microsoft Edge Add-ons][Edge] (Published by [Nicole Rolls][Nicole Rolls] until version 1.62. Ownership transfer at version 1.64.)
+| Mejora | Qué aporta |
+|---|---|
+| Contador de bloqueos en el popup | Ver cuántos anuncios y rastreadores se bloquearon en la página actual |
+| Lista propia para Latinoamérica | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
+| Tema Chalablock en el panel de opciones | Hoy el tema propio solo cubre el popup |
+| Pantalla de bienvenida | Explicar en español los modos de filtrado al instalar |
+| Traducción completa de los textos propios | Los textos añadidos por Chalablock solo están en español e inglés |
+| Canal propio de reportes | Recibir aquí los reportes de sitios en español en vez de enviarlos al proyecto original |
+| Compilación automática | Generar el paquete listo para instalar en cada versión, sin compilar a mano |
+| Publicación en Chrome Web Store y Edge Add-ons | Instalación con un clic y actualizaciones automáticas |
 
-[Opera Add-ons][Opera]
+Las sugerencias son bienvenidas en los [reportes del repositorio](https://github.com/joelchala/Chalablock/issues).
 
-uBO should be compatible with any Chromium-based browser.
+## Apoyar el proyecto
 
-#### Thunderbird
+Chalablock es gratuito. Si te resulta útil, puedes hacer una [donación opcional por PayPal](https://www.paypal.com/ncp/payment/LU3SQKTCXX9SW). Donar no desbloquea ninguna función.
 
-[Thunderbird Add-ons][Thunderbird]
+## Créditos y licencia
 
-In Thunderbird, uBlock Origin does not affect emails, just feeds.
+Chalablock es una versión modificada de [uBlock Origin Lite](https://github.com/gorhill/uBlock), creado por Raymond Hill (gorhill) y sus colaboradores, a quienes corresponde el derecho de autor del código original. Las modificaciones y el desarrollo posterior son de Joel Chala (desde noviembre de 2026). Chalablock no está afiliado al proyecto original ni cuenta con su respaldo.
 
-#### All Programs
+Las listas de filtros son obra de sus respectivos autores, entre ellos [uBlock Origin / uAssets](https://github.com/uBlockOrigin/uAssets), EasyList y AdGuard.
 
-Do **NOT** use uBO with any other content blocker. uBO [performs][Performance] as well as or better than most popular blockers. Other blockers can prevent uBO's privacy or anti-blocker-defusing features from working correctly.
-
-[Manual Installation][Manual Installation]
-
-#### Enterprise Deployment
-
-[Deploying uBO][Deployment]
-
-## Release History
-
-[Releases Page][Releases]
-
-## Translations
-
-Help translate uBO via [Crowdin][Crowdin].
-
-## About
-
-[Manifesto][Manifesto]
-
-[Privacy Policy][Privacy Policy]
-
-[GPLv3 License][License]
-
-Free. Open-source. For users by users. No donations sought.
-
-If you ever want to contribute something, think about the people working hard to maintain the filter lists you are using, which are available to use by all for free.
-
-
-<!----------------------------------------------------------------------------->
-
-[Peter Lowe's Blocklist]: https://pgl.yoyo.org/adservers/
-[Malicious Blocklist]: https://gitlab.com/malware-filter/urlhaus-filter#malicious-url-blocklist
-[Performance]: https://www.debugbear.com/blog/chrome-extensions-website-performance#the-impact-of-ad-blocking-on-website-performance
-[EasyPrivacy]: https://easylist.to/#easyprivacy
-[Thunderbird]: https://addons.thunderbird.net/thunderbird/addon/ublock-origin/
-[EasyList]: https://easylist.to/#easylist
-[Mozilla]: https://addons.mozilla.org/addon/ublock-origin/
-[Crowdin]: https://crowdin.com/project/ublock
-[Reddit]: https://www.reddit.com/r/uBlockOrigin/
-[Theft]: https://x.com/LeaVerou/status/518154828166725632
-[Opera]: https://addons.opera.com/extensions/details/ublock/
-[Edge]: https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak
-[NPM]: https://www.npmjs.com/package/@gorhill/ubo-core
-
-[Manifesto]: MANIFESTO.md
-[License]: LICENSE.txt
-
-[Nicole Rolls]: https://github.com/nicole-ashley
-
-<!---------------------------------[ Internal ]-------------------------------->
-
-[Manual Installation]: https://github.com/gorhill/uBlock/tree/master/dist#install
-[Extended Syntax]: https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#extended-syntax
-[Privacy Policy]: https://github.com/gorhill/uBlock/wiki/Privacy-policy
-[uBO Filters]: https://github.com/uBlockOrigin/uAssets/tree/master/filters
-[Permissions]: https://github.com/gorhill/uBlock/wiki/Permissions
-[Commit Rate]: https://github.com/gorhill/uBlock/commits/master
-[Works Best]: https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox
-[Deployment]: https://github.com/gorhill/uBlock/wiki/Deploying-uBlock-Origin
-[Blocking]: https://github.com/gorhill/uBlock/wiki/Blocking-mode
-[Releases]: https://github.com/gorhill/uBlock/releases
-[Issues]: https://github.com/uBlockOrigin/uBlock-issues/issues
-[Beta]: https://github.com/gorhill/uBlock/blob/master/dist/README.md#for-beta-version
-[Wiki]: https://github.com/gorhill/uBlock/wiki
-
-<!----------------------------------[ Badges ]--------------------------------->
-
-[Badge Localization]: https://d322cqt584bo4o.cloudfront.net/ublock/localized.svg
-[Badge Commits]: https://img.shields.io/github/commit-activity/m/gorhill/ublock?label=Commits
-[Badge Mozilla]: https://img.shields.io/amo/rating/ublock-origin?label=Firefox
-[Badge License]: https://img.shields.io/badge/License-GPLv3-blue.svg
-[Badge Chrome]: https://img.shields.io/chrome-web-store/rating/cjpalhdlnbpafiamejdnhcphjbkeiagm?label=Chrome
-[Badge Edge]: https://img.shields.io/badge/dynamic/json?label=Edge&color=brightgreen&query=%24.averageRating&suffix=%2F%35&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fodfafepnkmbhccpbejgmiehpchacaeak
-[Badge Issues]: https://img.shields.io/github/issues/uBlockOrigin/uBlock-issues
-[Badge NPM]: https://img.shields.io/npm/v/@gorhill/ubo-core
+Todo el proyecto se distribuye bajo la [GNU General Public License v3](LICENSE.txt): puedes usarlo, estudiarlo, modificarlo y redistribuirlo bajo la misma licencia.
