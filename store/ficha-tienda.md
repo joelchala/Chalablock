@@ -1,4 +1,4 @@
-# Chalablock: ficha para las tiendas de extensiones
+# Chalablock: ficha para Edge Add-ons
 
 Material listo para copiar y pegar en **Microsoft Partner Center (Edge Add-ons)**. Sirve también para la Chrome Web Store, cambiando el paquete.
 
