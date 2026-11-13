@@ -573,7 +573,7 @@ function exportToFile() {
     if ( text.length === 0 ) { return; }
     const a = document.createElement('a');
     a.href = `data:text/plain;charset=utf-8,${encodeURIComponent(text + '\n')}`;
-    dom.attr(a, 'download', 'my-ubol-filters.txt');
+    dom.attr(a, 'download', 'my-chalablock-filters.txt');
     dom.attr(a, 'type', 'text/plain');
     a.click();
     dom.prop('section[data-pane="filters"] details', 'open', false);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Chalablock logo. Source of truth for img/icon_*.png (regenerate the PNGs from this file). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <path id="shield" d="M64 6C52 16 34 20 16 21Q10 21 10 27V62C10 92 36 110 64 122C92 110 118 92 118 62V27Q118 21 112 21C94 20 76 16 64 6Z"/>
+    <clipPath id="right"><rect x="64" y="0" width="64" height="128"/></clipPath>
+  </defs>
+  <use href="#shield" fill="#800000"/>
+  <use href="#shield" fill="#6e0009" clip-path="url(#right)"/>
+  <path d="M45 43L83 81M83 43L45 81" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none"/>
+</svg>

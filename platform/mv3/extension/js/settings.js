@@ -140,7 +140,7 @@ async function backupSettings() {
     const json = JSON.stringify(data, null, 2)  + '\n';
     const a = document.createElement('a');
     a.href = `data:text/plain;charset=utf-8,${encodeURIComponent(json)}`;
-    dom.attr(a, 'download', 'my-ubol-settings.json');
+    dom.attr(a, 'download', 'my-chalablock-settings.json');
     dom.attr(a, 'type', 'application/json');
     a.click();
 }

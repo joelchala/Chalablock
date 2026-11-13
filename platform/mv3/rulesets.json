@@ -563,7 +563,7 @@
     "lang": "an ast ca cak es eu gl gn trs quz",
     "name": "🇪🇸es 🇦🇷ar 🇲🇽mx 🇨🇴co: EasyList Spanish",
     "tags": "ads aragonese basque catalan spanish español galician guarani",
-    "enabled": false,
+    "enabled": true,
     "urls": [
       "https://easylist-downloads.adblockplus.org/easylistspanish.txt"
     ],
@@ -575,7 +575,7 @@
     "lang": "an ast ca cak es eu gl gn trs pt quz",
     "name": "🇪🇸es 🇦🇷ar 🇧🇷br 🇵🇹pt: AdGuard Spanish/Portuguese",
     "tags": "ads aragonese basque catalan spanish español galician guarani portuguese português",
-    "enabled": false,
+    "enabled": true,
     "urls": [
       "https://filters.adtidy.org/extension/ublock/filters/9.txt"
     ],

@@ -12,6 +12,43 @@
     top: -20%;
 }
 
+/* Chalablock theme: the whole UI derives its colors from this scale, so
+   swapping these 11 values re-brands the popup. Edit here to change the
+   brand color. */
+:root {
+     --primary-5: 38  10   2;
+    --primary-10: 54  16   3;
+    --primary-20: 94  30   4;
+    --primary-30: 138  46   6;
+    --primary-40: 180  62   8;
+    --primary-50: 220  82  10;
+    --primary-60: 245 120  50;
+    --primary-70: 250 160 105;
+    --primary-80: 252 195 158;
+    --primary-90: 254 228 210;
+    --primary-95: 255 242 232;
+}
+#brand {
+    align-items: center;
+    background: linear-gradient(135deg, rgb(var(--primary-40)), rgb(var(--primary-50)));
+    color: #fff;
+    display: flex;
+    font-size: 1.15em;
+    font-weight: 700;
+    gap: 0.5em;
+    letter-spacing: 0.02em;
+    padding: 0.6em 0.75em;
+}
+#brand > img {
+    height: 1.5em;
+    width: 1.5em;
+}
+.toolMenu > .tool {
+    border-radius: 6px;
+    margin: 0 0.25em;
+    padding-inline-start: 0.25em;
+}
+
 :root {
     --popup-min-width: calc(
         var(--filtering-mode-slider-width) +
@@ -233,4 +270,20 @@ body.needReload #refresh {
 }
 :root.desktop .tool:hover {
     background-color: var(--popup-toolbar-surface-hover);
+}
+
+/* Chalablock: donation button, left side of the bottom ribbon */
+#gotoDonate {
+    align-self: center;
+    background-color: var(--accent-surface-1);
+    border-radius: 999px;
+    color: var(--accent-ink-1);
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-inline-start: 0.5em;
+    padding: 0.3em 0.9em;
+    white-space: nowrap;
+}
+#gotoDonate:hover {
+    filter: brightness(1.1);
 }

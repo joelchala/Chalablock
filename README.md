@@ -1,3 +1,24 @@
+# Chalablock
+
+**Chalablock** es un bloqueador de anuncios de código abierto para navegadores Chromium (Manifest V3), enfocado en privacidad y bloqueo rápido.
+
+- **Autor:** Joel Chala
+- **Repositorio:** https://github.com/joelchala/Chalablock
+- **Licencia:** [GNU GPLv3](LICENSE.txt)
+- **Basado en:** [uBlock Origin Lite](https://github.com/gorhill/uBlock) de Raymond Hill (gorhill). Chalablock es una versión modificada; no está afiliado al autor original ni cuenta con su respaldo.
+
+## Cambios respecto al original (noviembre de 2026)
+
+- Nombre, descripción e iconos propios (`platform/mv3/extension/img/`).
+- Tema visual propio en el popup (`platform/mv3/extension/css/popup.css`).
+- Listas en español (EasyList Spanish y AdGuard Spanish/Portuguese) activas por defecto (`platform/mv3/rulesets.json`).
+
+El código de Chalablock está en `platform/mv3/`. Para compilar: `make mv3-chromium` (ver `platform/mv3/README.md`).
+
+A continuación se conserva el README original de uBlock Origin.
+
+***
+
 [![Badge Commits]][Commit Rate]
 [![Badge Issues]][Issues]
 [![Badge Localization]][Crowdin]

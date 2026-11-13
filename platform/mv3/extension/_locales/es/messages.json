@@ -1,10 +1,10 @@
 {
   "extName": {
-    "message": "uBlock Origin Lite",
+    "message": "Chalablock",
     "description": "extension name."
   },
   "extShortDesc": {
-    "message": "Un bloqueador de contenido eficiente. Bloquea anuncios, rastreadores, criptomineros y aún más.",
+    "message": "Bloqueo de anuncios rápido y privado. Detiene anuncios, rastreadores y sitios maliciosos desde que la instalas, sin recopilar datos.",
     "description": "this will be in the Chrome web store: must be 132 characters or less"
   },
   "perRulesetStats": {
@@ -12,8 +12,8 @@
     "description": "Appears aside each filter list in the _3rd-party filters_ pane"
   },
   "dashboardName": {
-    "message": "uBO Lite — Panel de control",
-    "description": "English: uBO Lite — Dashboard"
+    "message": "Chalablock — Panel de control",
+    "description": "English: Chalablock — Dashboard"
   },
   "settingsPageName": {
     "message": "Configuración",
@@ -108,7 +108,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "customListImportUserScriptsInfo": {
-    "message": "Para hacer respetar los filtros cosméticos o de scripts a partir de listas importadas, debes otorgar a uBO Lite permiso para ejecutar scripts de usuario.",
+    "message": "Para hacer respetar los filtros cosméticos o de scripts a partir de listas importadas, debes otorgar a Chalablock permiso para ejecutar scripts de usuario.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "customFiltersImportExportLabel": {
@@ -120,7 +120,7 @@
     "description": "Placeholder text which describes the purpose of the textarea widget"
   },
   "userScriptsInfo": {
-    "message": "Abre la página de extensiones de tu navegador. (<code>chrome://extensions</code> en Chrome o <code>about:addons</code> en Firefox), abre los <b>uBO Lite</b> detalles, y enciende <b>Permitir scripts de usuario</b> (tambien referido como \"scripts de terceros no verificados\").",
+    "message": "Abre la página de extensiones de tu navegador. (<code>chrome://extensions</code> en Chrome o <code>about:addons</code> en Firefox), abre los <b>Chalablock</b> detalles, y enciende <b>Permitir scripts de usuario</b> (tambien referido como \"scripts de terceros no verificados\").",
     "description": "A notice to inform user on how to enable 'user scripts' permission"
   },
   "aboutChangelog": {
@@ -192,7 +192,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option3": {
-    "message": "Detecta uBO Lite",
+    "message": "Detecta Chalablock",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option4": {
@@ -200,7 +200,7 @@
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option5": {
-    "message": "Funciona mal cuando uBO Lite está habilitado",
+    "message": "Funciona mal cuando Chalablock está habilitado",
     "description": "An entry in the widget used to select the type of issue"
   },
   "supportS6Select1Option6": {
@@ -296,7 +296,7 @@
     "description": "Header for filter-creation section in the dashboard"
   },
   "sandboxEditorUserScriptsInfo": {
-    "message": "Para hacer respetar los filtros cosméticos o de scripts desde el entorno aislado, debes otorgar a uBO Lite permiso para ejecutar scripts de usuario.",
+    "message": "Para hacer respetar los filtros cosméticos o de scripts desde el entorno aislado, debes otorgar a Chalablock permiso para ejecutar scripts de usuario.",
     "description": "A notice to inform user that the enforcement of some filters requires permission to execute 'user scripts'"
   },
   "developerModeLabel": {
@@ -328,7 +328,7 @@
     "description": "Web page title for the strict-blocked page"
   },
   "strictblockSentence1": {
-    "message": "uBO Lite impidió la carga de la página:",
+    "message": "Chalablock impidió la carga de la página:",
     "description": "Sentence used in the strict-blocked page"
   },
   "strictblockReasonSentence1": {
@@ -462,5 +462,13 @@
   "unpickerUsage": {
     "message": "Selecciona un filtro abajo para resaltar los elementos coincidentes en la página web. Haz clic en la papelera para eliminar un filtro.",
     "description": "Summary description on how to use the tool to remove custom filters"
+  },
+  "aboutDonate": {
+    "message": "❤ Apoya el desarrollo de Chalablock (donación opcional por PayPal)",
+    "description": "Link to the optional PayPal donation page"
+  },
+  "popupDonate": {
+    "message": "Donar",
+    "description": "Label of the donation button in the popup panel"
   }
 }

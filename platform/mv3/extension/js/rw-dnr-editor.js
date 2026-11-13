@@ -360,7 +360,7 @@ export class ReadWriteDNREditor extends DNREditor {
     }
 
     exportToFile(text) {
-        return super.exportToFile(text, 'my-ubol-dnr-rules.json');
+        return super.exportToFile(text, 'my-chalablock-dnr-rules.json');
     }
 
     importFromPaste(editor, transaction) {
