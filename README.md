@@ -69,7 +69,6 @@ Mejoras previstas para las próximas versiones. Nada de esto está implementado 
 | Mejora | Qué aporta |
 |---|---|
 | Lista propia para Latinoamérica | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
-| Tema Chalablock en el panel de opciones | Hoy el tema propio solo cubre el popup |
 | Pantalla de bienvenida | Explicar en español los modos de filtrado al instalar |
 | Traducción completa de los textos propios | Los textos añadidos por Chalablock solo están en español e inglés |
 | Canal propio de reportes | Recibir aquí los reportes de sitios en español en vez de enviarlos al proyecto original |

@@ -1,0 +1,16 @@
+/* Chalablock theme: every page derives its colors from this scale, so
+   swapping these 11 values re-brands the whole extension. Loaded right
+   after default.css by every HTML page. */
+:root {
+     --primary-5: 38  10   2;
+    --primary-10: 54  16   3;
+    --primary-20: 94  30   4;
+    --primary-30: 138  46   6;
+    --primary-40: 180  62   8;
+    --primary-50: 220  82  10;
+    --primary-60: 245 120  50;
+    --primary-70: 250 160 105;
+    --primary-80: 252 195 158;
+    --primary-90: 254 228 210;
+    --primary-95: 255 242 232;
+}
