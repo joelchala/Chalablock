@@ -23,6 +23,7 @@ Chalablock bloquea anuncios, rastreadores y sitios maliciosos desde el momento e
 
 - **Bloqueo inmediato**, sin configuración: anuncios, rastreadores, criptomineros y dominios de malware.
 - **Listas en español activas por defecto:** EasyList Spanish y AdGuard Spanish/Portuguese, además de las listas generales.
+- **Contador de bloqueos:** el popup muestra cuántas peticiones se bloquearon en la página actual.
 - **Cuatro modos de filtrado por sitio**, desde «sin filtrado» hasta «completo», con un control deslizante en el popup.
 - **Herramientas por página:** eliminar un elemento molesto con un clic y crear filtros personalizados.
 - **Más de 50 listas opcionales**, regionales y temáticas (avisos de cookies, redes sociales, molestias).
@@ -33,9 +34,10 @@ Chalablock bloquea anuncios, rastreadores y sitios maliciosos desde el momento e
 
 | Prueba | Resultado | Navegador | Fecha |
 |---|---|---|---|
-| [adblock-tester.com](https://adblock-tester.com/) | 91 de 100 (11 servicios, 22 comprobaciones) | Microsoft Edge | 12 nov 2026 |
+| [adblock-tester.com](https://adblock-tester.com/), modo óptimo (por defecto) | 91 de 100 | Microsoft Edge | 12 nov 2026 |
+| [adblock-tester.com](https://adblock-tester.com/), modo completo | 96 de 100 | Microsoft Edge | 12 nov 2026 |
 
-El único punto no superado con certeza es la visibilidad del bloque de Google AdSense, que el propio sitio marca como no determinable de forma automática.
+La prueba cubre 11 servicios y 22 comprobaciones. En modo óptimo, el único punto no superado con certeza es la visibilidad del bloque de Google AdSense, que el propio sitio marca como no determinable de forma automática.
 
 ## Instalación
 
@@ -66,7 +68,6 @@ Mejoras previstas para las próximas versiones. Nada de esto está implementado 
 
 | Mejora | Qué aporta |
 |---|---|
-| Contador de bloqueos en el popup | Ver cuántos anuncios y rastreadores se bloquearon en la página actual |
 | Lista propia para Latinoamérica | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
 | Tema Chalablock en el panel de opciones | Hoy el tema propio solo cubre el popup |
 | Pantalla de bienvenida | Explicar en español los modos de filtrado al instalar |

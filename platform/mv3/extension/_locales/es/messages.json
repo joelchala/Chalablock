@@ -470,5 +470,9 @@
   "popupDonate": {
     "message": "Donar",
     "description": "Label of the donation button in the popup panel"
+  },
+  "popupBlockedCount": {
+    "message": "bloqueados en esta página",
+    "description": "Follows a number in the popup panel: requests blocked in the current tab"
   }
 }

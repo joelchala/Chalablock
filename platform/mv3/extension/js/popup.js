@@ -331,6 +331,16 @@ async function init() {
 
     dom.text('#hostname', punycode.toUnicode(tabURL.hostname));
 
+    // Chalablock: blocked-request counter. activeTab (granted when the popup
+    // opens) is enough for getMatchedRules on the current tab.
+    // shortcut: counts every matched rule in the tab (rare allow rules and the
+    // previous page within 5 minutes included); look up rule actions and pass
+    // minTimeStamp if an exact per-page figure is ever needed.
+    browser.declarativeNetRequest.getMatchedRules?.({ tabId: currentTab.id }).then(r => {
+        dom.text('#blockedCount > b', r.rulesMatchedInfo.length.toLocaleString());
+        dom.cl.add('#blockedCount', 'enabled');
+    }).catch(( ) => { });
+
     dom.cl.toggle('#gotoMatchedRules', 'enabled',
         popupPanelData.isSideloaded === true &&
         popupPanelData.developerMode &&

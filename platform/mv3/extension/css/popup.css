@@ -287,3 +287,21 @@ body.needReload #refresh {
 #gotoDonate:hover {
     filter: brightness(1.1);
 }
+
+/* Chalablock: blocked-request counter */
+#blockedCount {
+    align-items: baseline;
+    color: var(--ink-3);
+    display: none;
+    gap: 0.4em;
+    justify-content: center;
+    margin-bottom: var(--popup-gap-thin);
+}
+#blockedCount.enabled {
+    display: flex;
+}
+#blockedCount > b {
+    color: var(--accent-surface-1);
+    font-size: 1.8em;
+    font-weight: 700;
+}
