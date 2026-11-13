@@ -1,12 +1,11 @@
 # Chalablock: ficha para Chrome Web Store
 
-Material listo para cuando se pague el registro de desarrollador (pago único de USD 5 en <https://chrome.google.com/webstore/devconsole>). Los textos largos de descripción son los mismos de [ficha-tienda.md](ficha-tienda.md), sección 5.
+Material listo para pegar en <https://chrome.google.com/webstore/devconsole> (cuenta de desarrollador `joelchala07@gmail.com`, ya registrada). El panel no se puede automatizar: se llena a mano, en el orden de este documento. Los textos largos de descripción son los mismos de [ficha-tienda.md](ficha-tienda.md), sección 5.
 
 ## 0. Antes de empezar
 
-- Registrar la cuenta de desarrollador y pagar la cuota única.
-- Verificar el correo de contacto en la pestaña **Account**: sin eso no deja publicar.
-- En **Account**, declarar si eres o no un «trader» (comerciante). Para un proyecto gratuito sin ventas: **non-trader**.
+- En **Account**: correo de contacto `info@chaladev.site` verificado (sin eso no deja publicar) y declaración de **non-trader** (proyecto gratuito sin ventas).
+- Si al subir el paquete aparece el diálogo **«Aceptar subidas de CRX verificadas»**, pulsar **Cancelar**: es opcional y, si se activa, toda subida futura exige firmar con una clave privada que no se puede perder.
 
 ## 1. Package (paquete)
 
@@ -67,19 +66,15 @@ Chalablock blocks ads, trackers and malicious sites on the pages the user visits
 
 ## 5. Test instructions (instrucciones de prueba)
 
-Pestaña opcional, pero ayuda a la revisión. No hacen falta usuario ni contraseña; pegar en «Additional instructions»:
+Usuario y contraseña: dejar vacíos. Pegar en «Additional instructions» (límite de 500 caracteres; este texto tiene 495):
 
 ```
-No account or credentials are needed.
-
-1. Install the extension. A welcome page opens once.
-2. Visit any site with ads (for example https://adblock-tester.com/). Ads and trackers are blocked and the toolbar badge shows the number of blocked requests.
-3. Click the toolbar icon: the popup shows the per-site filtering mode slider and the blocked-request counter.
-
-Chalablock is open source (GPLv3): https://github.com/joelchala/Chalablock
-It is a modified version of uBlock Origin Lite by Raymond Hill, with its own branding and theme, Spanish filter lists enabled by default, a blocked-request counter in the popup and a welcome page. It contains no remote code and no analytics; all filtering rules are bundled as declarativeNetRequest static rulesets.
-
-The "Donate" link opens an external PayPal page; it is optional and unlocks no functionality.
+No login needed.
+1. Install: a welcome page opens once.
+2. Open https://adblock-tester.com/ : ads and trackers are blocked; the toolbar badge counts blocked requests.
+3. Click the toolbar icon: popup with per-site filtering mode and counter.
+Open source (GPLv3), modified uBlock Origin Lite: own branding, Spanish lists by default, counter, welcome page. No remote code or analytics; rules are bundled static DNR rulesets. Donate link is optional.
+Source: https://github.com/joelchala/Chalablock
 ```
 
 ## Riesgos de revisión a tener presentes
