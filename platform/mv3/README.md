@@ -1,16 +1,16 @@
-# How to build MV3 uBO Lite
+# How to build Chalablock (MV3)
 
 Instructions for reviewers.
 
-The following assumes a linux environment.
+The following assumes a Linux environment (or WSL/Git Bash with Node.js, `jq`, and `zip`).
 
 1. Open Bash console
-2. `git clone  https://github.com/gorhill/uBlock.git`
-3. `cd uBlock`
+2. `git clone https://github.com/joelchala/Chalablock.git`
+3. `cd Chalablock`
 4. `git submodule init`
 5. `git submodule update`
-9. `make mv3-[platform]`, where `[platform]` is either `chromium`, `edge`, `firefox`, or `safari`
-10. This will fully build uBO Lite, and during the process filter lists will be downloaded from their respective remote servers
+6. `tools/make-mv3.sh chromium` (or `edge`, `firefox`, `safari`), or `tools/make-mv3.sh chromium <version>` to build a release zip.
+7. This will build Chalablock (based on uBlock Origin Lite) and compile the bundled filter lists into static declarativeNetRequest rulesets.
 
 Upon completion of the script, the resulting extension package will become present in:
 

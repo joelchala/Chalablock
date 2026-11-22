@@ -852,13 +852,64 @@ async function processCosmeticFilters(assetDetails, mapin) {
 
 /******************************************************************************/
 
+const INJECTION_SCRIPTLET_TOKENS = new Set([
+    'rpnt',
+    'replace-node-text',
+    'trusted-rpnt',
+    'trusted-replace-node-text',
+    'trusted-create-html',
+]);
+
+// Exclude scriptlet rules whose arguments inject remote scripts, base64/atob
+// payloads, eval/Function calls, or large minified code blocks, which trigger
+// Chrome Web Store MV3 "Blue Argon" (remote code) and "Red Titanium"
+// (obfuscated code) rejections.
+function isScriptletStoreCompliant(details) {
+    if ( Array.isArray(details.args) === false || details.args.length === 0 ) {
+        return true;
+    }
+    const token = details.args[0].replace(/\.js$/, '');
+    const payload = details.args.slice(1).join(' ');
+    if ( /\bnew\s+Function\s*\(\s*atob\s*\(/i.test(payload) ) {
+        return false;
+    }
+    if ( INJECTION_SCRIPTLET_TOKENS.has(token) === false ) {
+        return true;
+    }
+    if ( /\b(?:atob|btoa|eval)\s*\(/i.test(payload) ) {
+        return false;
+    }
+    if ( /\bnew\s+Function\s*\(/i.test(payload) ) {
+        return false;
+    }
+    if ( /createElement\s*\(\s*['"`]script['"`]\s*\)/i.test(payload) ) {
+        return false;
+    }
+    if ( /https?:\/\//i.test(payload) ) {
+        return false;
+    }
+    const replacementArg = details.args[3];
+    if ( typeof replacementArg === 'string' && replacementArg.length > 500 ) {
+        return false;
+    }
+    return true;
+}
+
 async function processScriptletFilters(assetDetails, mapin) {
     if ( mapin === undefined ) { return 0; }
     if ( mapin.size === 0 ) { return 0; }
 
     const { id } = assetDetails;
+    let rejectedCount = 0;
     for ( const details of mapin.values() ) {
+        if ( isScriptletStoreCompliant(details) === false ) {
+            rejectedCount += 1;
+            continue;
+        }
         makeScriptlets.compile(id, details);
+    }
+    if ( rejectedCount !== 0 ) {
+        log(`\tRejected ${rejectedCount} store-noncompliant scriptlet rule(s) in ${id}`);
     }
     const template = await fs.readFile('./js/offscreen/scriptlet.template.js', {
         encoding: 'utf8',

@@ -9,7 +9,7 @@ Material listo para pegar en <https://chrome.google.com/webstore/devconsole> (cu
 
 ## 1. Package (paquete)
 
-Subir `store/paquetes/Chalablock_1.0.0.chromium.zip` (también en <https://github.com/joelchala/Chalablock/releases>). **No subas el de Edge.**
+Subir `store/paquetes/Chalablock_1.0.1.chromium.zip` (o el `.chromium.zip` de la última release en <https://github.com/joelchala/Chalablock/releases>). **No subas el de Edge.**
 
 Si para entonces hay una versión más nueva, usa el `.chromium.zip` de esa versión: Chrome Web Store no acepta volver a subir un número de versión ya usado.
 
