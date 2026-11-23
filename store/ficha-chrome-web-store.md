@@ -1,6 +1,6 @@
 # Chalablock: ficha para Chrome Web Store
 
-Material listo para pegar en <https://chrome.google.com/webstore/devconsole> (cuenta de desarrollador `joelchala07@gmail.com`, ya registrada). El panel no se puede automatizar: se llena a mano, en el orden de este documento. Los textos largos de descripción son los mismos de [ficha-tienda.md](ficha-tienda.md), sección 5.
+Material listo para pegar en <https://chrome.google.com/webstore/devconsole> (cuenta de desarrollador `info@chaladev.site`, ya registrada). El panel no se puede automatizar: se llena a mano, en el orden de este documento. Los textos largos de descripción son los mismos de [ficha-tienda.md](ficha-tienda.md), sección 5.
 
 ## 0. Antes de empezar
 
@@ -26,8 +26,8 @@ Si para entonces hay una versión más nueva, usa el `.chromium.zip` de esa vers
 | Small promo tile (440×280) | `promo-440x280.png` |
 | Marquee promo tile (1400×560) | `destacada-1400x560.png` (opcional) |
 | Official URL | Dejar en «None» (requiere verificar un dominio propio) |
-| Homepage URL | `https://github.com/joelchala/Chalablock` |
-| Support URL | `https://github.com/joelchala/Chalablock/issues` |
+| Homepage URL | `https://chaladev.site` (o `https://github.com/joelchala/Chalablock`) |
+| Support URL | `https://chaladev.site/#privacidad` (o `https://github.com/joelchala/Chalablock/issues`) |
 | Mature content | No |
 
 ## 3. Privacy practices (prácticas de privacidad)
