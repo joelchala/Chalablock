@@ -41,7 +41,7 @@ Cualquier cambio se publicará en este mismo archivo; el historial completo es p
 
 ## Contacto
 
-Para preguntas sobre privacidad, abre un reporte en <https://github.com/joelchala/Chalablock/issues>.
+Para preguntas sobre privacidad escribe a <mailto:info@chaladev.site>, visita <https://chaladev.site/#privacidad> o abre un reporte en <https://github.com/joelchala/Chalablock/issues>.
 
 ---
 
@@ -88,4 +88,4 @@ Any change will be published in this same file; the full history is public in th
 
 ## Contact
 
-For privacy questions, open an issue at <https://github.com/joelchala/Chalablock/issues>.
+For privacy questions, email <mailto:info@chaladev.site>, visit <https://chaladev.site/#privacidad>, or open an issue at <https://github.com/joelchala/Chalablock/issues>.
