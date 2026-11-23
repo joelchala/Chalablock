@@ -51,6 +51,17 @@ test("3. Manifiesto Firefox dentro de .firefox.zip incluye browser_specific_sett
   assert.ok(Array.isArray(manifest.background?.scripts), "Firefox manifest must declare background.scripts");
   assert.deepEqual(manifest.background.scripts, ["/js/background.js"]);
   assert.equal(manifest.background?.service_worker, undefined);
+  assert.equal(manifest.incognito, undefined);
+  assert.equal(manifest.options_page, undefined);
+  assert.equal(manifest.options_ui?.page, "dashboard.html");
+  assert.equal(manifest.options_ui?.open_in_tab, true);
+  assert.equal(manifest.permissions?.includes("userScripts"), false);
+  assert.equal(manifest.optional_permissions?.includes("userScripts"), true);
+  assert.equal(manifest.storage, undefined);
+  assert.ok(Array.isArray(manifest.web_accessible_resources));
+  for (const war of manifest.web_accessible_resources) {
+    assert.equal(war.use_dynamic_url, undefined);
+  }
 
   const offscreenEntry = extractZipEntry(fs.readFileSync(ffZipPath), "js/ext-offscreen.js");
   assert.ok(offscreenEntry, "Missing js/ext-offscreen.js in Firefox ZIP");

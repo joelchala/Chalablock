@@ -195,9 +195,35 @@ export function toFirefoxManifest(manifest, geckoId = "chalablock@chaladev.site"
       ...rest
     };
   }
-  if (Array.isArray(ff.permissions)) {
-    ff.permissions = ff.permissions.filter((p) => p !== "offscreen" && p !== "declarativeNetRequestFeedback");
+  if (ff.options_page) {
+    ff.options_ui = {
+      open_in_tab: true,
+      page: ff.options_page
+    };
+    delete ff.options_page;
   }
+  if (Array.isArray(ff.permissions)) {
+    const hasUserScripts = ff.permissions.includes("userScripts");
+    ff.permissions = ff.permissions.filter(
+      (p) => p !== "offscreen" && p !== "declarativeNetRequestFeedback" && p !== "userScripts"
+    );
+    if (hasUserScripts) {
+      const optional = Array.isArray(ff.optional_permissions) ? [...ff.optional_permissions] : [];
+      if (!optional.includes("userScripts")) {
+        optional.push("userScripts");
+      }
+      ff.optional_permissions = optional;
+    }
+  }
+  if (Array.isArray(ff.web_accessible_resources)) {
+    for (const item of ff.web_accessible_resources) {
+      if (item && typeof item === "object") {
+        delete item.use_dynamic_url;
+      }
+    }
+  }
+  delete ff.incognito;
+  delete ff.storage;
   delete ff.minimum_chrome_version;
   return ff;
 }
