@@ -50,6 +50,32 @@ Chalablock todavía no está publicado en las tiendas de extensiones. Puedes des
 3. Activa el **modo de desarrollador**.
 4. Pulsa **Cargar descomprimida** y elige la carpeta `dist/build/uBOLite.chromium`.
 
+Los paquetes listos para subir a tiendas se encuentran en `store/paquetes/` (`Chalablock_1.0.1.chromium.zip` y `Chalablock_1.0.0.edge.zip`), junto con las fichas de publicación en [`store/`](store/).
+
+## Estructura del repositorio
+
+```text
+ChalaBlock/
+├── .github/workflows/build.yml   # Compilación y release automático en GitHub Actions
+├── assets/                       # Definiciones de listas de filtros
+├── dist/
+│   ├── version                   # Versión base
+│   └── build/uBOLite.chromium/   # Extensión MV3 compilada lista para cargar
+├── docs/                         # Documentación y páginas de prueba
+├── platform/mv3/                 # Código fuente específico de Manifest V3 (Chromium/Edge/Firefox/Safari)
+├── publish-extension/            # Scripts de publicación automatizada en tiendas
+├── src/                          # Recursos e interfaz compartidos
+├── store/
+│   ├── ficha-tienda.md           # Ficha para Microsoft Edge Add-ons
+│   ├── ficha-chrome-web-store.md # Ficha para Chrome Web Store
+│   ├── logo-300x300.png          # Logo de tienda (300×300)
+│   ├── promo-440x280.png         # Mosaico promocional (440×280)
+│   ├── destacada-1400x560.png    # Banner destacado (1400×560)
+│   ├── captura-*.png             # Capturas de pantalla (1280×800)
+│   └── paquetes/                 # Paquetes .zip compilados para Chrome y Edge
+└── tools/                        # Scripts de compilación (make-mv3.sh)
+```
+
 ## Compilar
 
 Requisitos: Git, Bash, Node.js 22 o superior y `jq`. En Windows sirve Git Bash.
@@ -82,6 +108,18 @@ Las sugerencias son bienvenidas en los [reportes del repositorio](https://github
 ## Apoyar el proyecto
 
 Chalablock es gratuito. Si te resulta útil, puedes hacer una [donación opcional por PayPal](https://www.paypal.com/ncp/payment/LU3SQKTCXX9SW). Donar no desbloquea ninguna función.
+
+## Suite Chala
+
+Chalablock forma parte de la **Suite Chala** de extensiones para navegador enfocadas en privacidad, rendimiento y productividad:
+
+- **[Chalablock](https://github.com/joelchala/Chalablock)** — Bloqueador de anuncios y rastreadores ligero (Manifest V3)
+- **[ChalaCookiesEdit](https://github.com/joelchala/ChalaCookiesEdit)** — Editor de cookies local con soporte CHIPS, incógnito, bloqueo e inspector JWT
+- **[ChalaDev](https://github.com/joelchala/ChalaDev)** — Suite de utilidades locales en el Side Panel para desarrolladores y diseñadores UI/UX
+- **[ChalaReader](https://github.com/joelchala/ChalaReader)** — Modo lectura limpio con Shadow DOM, temas visuales, Markdown, PDF y guardado offline
+- **[ChalaScrape](https://github.com/joelchala/ChalaScrape)** — Extractor visual de tablas, listas y tarjetas web a Excel (`.xlsx`) y CSV
+- **[ChalaTabs](https://github.com/joelchala/ChalaTabs)** — Gestor de pestañas en espacios de trabajo, ahorro de RAM y buscador instantáneo
+- **[ChalaVPN](https://github.com/joelchala/ChalaVPN)** — Proxy HTTPS/SOCKS5 con protección contra fugas de WebRTC
 
 ## Créditos y licencia
 
