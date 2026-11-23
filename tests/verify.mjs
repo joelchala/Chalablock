@@ -45,6 +45,9 @@ test("3. Manifiesto Firefox dentro de .firefox.zip incluye browser_specific_sett
   assert.equal(manifest.version, version);
   assert.equal(manifest.browser_specific_settings?.gecko?.id, "chalablock@chaladev.site");
   assert.equal(manifest.browser_specific_settings?.gecko?.strict_min_version, "113.0");
+  assert.deepEqual(manifest.browser_specific_settings?.gecko?.data_collection_permissions, {
+    required: ["none"]
+  });
   assert.ok(Array.isArray(manifest.background?.scripts), "Firefox manifest must declare background.scripts");
   assert.deepEqual(manifest.background.scripts, ["/js/background.js"]);
   assert.equal(manifest.background?.service_worker, undefined);
