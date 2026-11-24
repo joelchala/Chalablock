@@ -19,7 +19,7 @@ Chalablock bloquea anuncios, rastreadores y sitios maliciosos desde el momento e
 - **Autor y mantenimiento:** Joel Chala ([info@chaladev.site](mailto:info@chaladev.site))
 - **Licencia:** [GNU GPLv3](LICENSE.txt)
 - **Privacidad:** [no recopila ningún dato](PRIVACY.md) · [chaladev.site/#privacidad](https://chaladev.site/#privacidad)
-- **Tiendas oficiales:** [Chrome Web Store](https://chromewebstore.google.com/detail/chalablock/ncfjlckbnjhdpcloanfmfjadabnkcbmi) · [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chalablock/fklbllplpjhgiinbdiibejeolkakklcm) · Mozilla Firefox AMO *(paquete `.firefox.zip` validado en AMO con 0 errores, en cola de publicación)*
+- **Tiendas oficiales:** [Chrome Web Store](https://chromewebstore.google.com/detail/chalablock/ncfjlckbnjhdpcloanfmfjadabnkcbmi) · [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chalablock/fklbllplpjhgiinbdiibejeolkakklcm) · Mozilla Firefox AMO (`chalablock`, *en revisión*)
 
 ## Características
 
@@ -49,7 +49,7 @@ Instala **Chalablock** directamente desde las tiendas oficiales o carga una comp
 
 - **Google Chrome Web Store:** [Chalablock en Chrome Web Store](https://chromewebstore.google.com/detail/chalablock/ncfjlckbnjhdpcloanfmfjadabnkcbmi)
 - **Microsoft Edge Add-ons:** [Chalablock en Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chalablock/fklbllplpjhgiinbdiibejeolkakklcm)
-- **Mozilla Firefox (AMO):** paquete `store/paquetes/Chalablock_1.0.1.firefox.zip` (`chalablock@chaladev.site`) validado en AMO con 0 errores, en cola de publicación; carga temporal en `about:debugging#/runtime/this-firefox`.
+- **Mozilla Firefox (AMO):** envío registrado en revisión (`chalablock`, ID `3140225`); paquete `store/paquetes/Chalablock_1.0.1.firefox.zip` (`chalablock@chaladev.site`) también cargable de forma temporal en `about:debugging#/runtime/this-firefox`.
 
 Para instalación manual desde [GitHub Releases](https://github.com/joelchala/Chalablock/releases) o código fuente:
 
@@ -109,7 +109,7 @@ En una compilación local, la extensión desempaquetada queda en `dist/build/uBO
 | Mejora | Estado | Qué aporta |
 |---|---|---|
 | Publicación en Chrome Web Store y Edge Add-ons | Publicado | Instalación con un clic y actualizaciones automáticas |
-| Paquete compatible con Mozilla Firefox (AMO) | Validado en AMO (0 errores) | Empaquetado MV3 dinámico desde el árbol único de fuentes, en cola de publicación |
+| Publicación en Mozilla Firefox (AMO) | En revisión | Envío `1.0.1` registrado (`chalablock`, ID `3140225`) desde el árbol único de fuentes |
 | Lista propia para Latinoamérica | Planificado | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
 | Traducción completa de los textos propios | Planificado | Ampliar idiomas más allá de español e inglés |
 | Canal propio de reportes | Planificado | Recibir aquí los reportes de sitios en español en vez de enviarlos al proyecto original |
