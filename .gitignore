@@ -8,3 +8,11 @@ node_modules/
 
 # Store packages are published as GitHub release assets
 /store/paquetes/
+
+# Local AI assistant instructions
+AGENTS.md
+agents.md
+AGENT.md
+agent.md
+CLAUDE.md
+claude.md
