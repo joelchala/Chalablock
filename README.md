@@ -5,7 +5,7 @@ Chalablock
 </h1>
 
 <p align="center">
-Bloqueador de anuncios de código abierto para Google Chrome, Microsoft Edge y Mozilla Firefox.<br>
+Bloqueador de anuncios de código abierto para Google Chrome, Microsoft Edge, Opera y Mozilla Firefox.<br>
 Rápido, privado y pensado para quienes navegan en español.
 </p>
 
@@ -19,7 +19,7 @@ Chalablock bloquea anuncios, rastreadores y sitios maliciosos desde el momento e
 - **Autor y mantenimiento:** Joel Chala ([info@chaladev.site](mailto:info@chaladev.site))
 - **Licencia:** [GNU GPLv3](LICENSE.txt)
 - **Privacidad:** [no recopila ningún dato](PRIVACY.md) · [chaladev.site/#privacidad](https://chaladev.site/#privacidad)
-- **Tiendas oficiales:** [Chrome Web Store](https://chromewebstore.google.com/detail/chalablock/ncfjlckbnjhdpcloanfmfjadabnkcbmi) · [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chalablock/fklbllplpjhgiinbdiibejeolkakklcm) · Mozilla Firefox AMO (`chalablock`, *en revisión*)
+- **Tiendas oficiales:** [Chrome Web Store](https://chromewebstore.google.com/detail/chalablock/ncfjlckbnjhdpcloanfmfjadabnkcbmi) · [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chalablock/fklbllplpjhgiinbdiibejeolkakklcm) · [Opera Add-ons](https://addons.opera.com/developer/) *(en preparación)* · Mozilla Firefox AMO (`chalablock`, *en revisión*)
 
 ## Características
 
@@ -49,6 +49,7 @@ Instala **Chalablock** directamente desde las tiendas oficiales o carga una comp
 
 - **Google Chrome Web Store:** [Chalablock en Chrome Web Store](https://chromewebstore.google.com/detail/chalablock/ncfjlckbnjhdpcloanfmfjadabnkcbmi)
 - **Microsoft Edge Add-ons:** [Chalablock en Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chalablock/fklbllplpjhgiinbdiibejeolkakklcm)
+- **Opera Add-ons:** [Complementos de Opera](https://addons.opera.com/developer/) *(en preparación; compatible con el paquete MV3 `store/paquetes/Chalablock_1.0.1.chromium.zip`)*
 - **Mozilla Firefox (AMO):** envío registrado en revisión (`chalablock`, ID `3140225`); paquete `store/paquetes/Chalablock_1.0.1.firefox.zip` (`chalablock@chaladev.site`) también cargable de forma temporal en `about:debugging#/runtime/this-firefox`.
 
 Para instalación manual desde [GitHub Releases](https://github.com/joelchala/Chalablock/releases) o código fuente:
@@ -110,6 +111,7 @@ En una compilación local, la extensión desempaquetada queda en `dist/build/uBO
 |---|---|---|
 | Publicación en Chrome Web Store y Edge Add-ons | Publicado | Instalación con un clic y actualizaciones automáticas |
 | Publicación en Mozilla Firefox (AMO) | En revisión | Envío `1.0.1` registrado (`chalablock`, ID `3140225`) desde el árbol único de fuentes |
+| Publicación en Opera Add-ons | En preparación | Distribución en [addons.opera.com](https://addons.opera.com/developer/) con el paquete MV3 `Chalablock_1.0.1.chromium.zip` |
 | Lista propia para Latinoamérica | Planificado | Dominios publicitarios de medios y sitios de la región que las listas generales no cubren |
 | Traducción completa de los textos propios | Planificado | Ampliar idiomas más allá de español e inglés |
 | Canal propio de reportes | Planificado | Recibir aquí los reportes de sitios en español en vez de enviarlos al proyecto original |
@@ -130,7 +132,8 @@ Chalablock es gratuito. Si te resulta útil, puedes hacer una [donación opciona
 - **[ChalaReader](https://github.com/joelchala/ChalaReader)** — Modo lectura limpio con Shadow DOM, temas visuales, Markdown, PDF y guardado offline
 - **[ChalaScrape](https://github.com/joelchala/ChalaScrape)** — Extractor visual de tablas, listas y tarjetas web a Excel (`.xlsx`) y CSV
 - **[ChalaTabs](https://github.com/joelchala/ChalaTabs)** — Gestor de pestañas en espacios de trabajo, ahorro de RAM y buscador instantáneo
-- **[ChalaVPN](https://github.com/joelchala/ChalaVPN)** — Proxy HTTPS/SOCKS5 con protección contra fugas de WebRTC
+- **[ChalaVoice](https://github.com/joelchala/ChalaVoice)** — Lector en voz alta 100% local con Popup, Mini Barra Flotante, Modo Inspector y lector de libros (`.epub`, `.md`, `.txt`)
+- **[ChalaVPN](https://github.com/joelchala/ChalaVPN)** — Proxy PAC seguro por país con rotación automática y protección WebRTC
 
 ## Créditos y licencia
 
